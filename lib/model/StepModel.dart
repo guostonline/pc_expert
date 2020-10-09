@@ -23,6 +23,7 @@ class StepModel extends ChangeNotifier {
   String imagePath;
   String imageString;
   String imagePathComposant;
+
   List<String> referanceList = [];
 
   File photoDePc;
