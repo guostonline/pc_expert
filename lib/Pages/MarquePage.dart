@@ -6,6 +6,8 @@ import 'package:pc_expert/model/Constant.dart';
 import 'package:pc_expert/model/StepModel.dart';
 import 'package:provider/provider.dart';
 
+import 'DaitailPage2.dart';
+
 class MarquePage extends StatelessWidget {
   const MarquePage({Key key}) : super(key: key);
 
@@ -63,7 +65,7 @@ class MarqueGridList extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => DatailsPage()),
+                MaterialPageRoute(builder: (context) => DetailsPage2()),
               );
             },
           ),
@@ -309,6 +311,7 @@ class MyTextField extends StatelessWidget {
       child: Visibility(
         visible: provider.isVisibleMarque,
         child: TextField(
+          onChanged: (value) => provider.selectMarque(value),
           onSubmitted: (value) => provider.selectMarque(value),
           style: myStyle,
           decoration: InputDecoration(

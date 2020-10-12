@@ -17,7 +17,7 @@ class WelcomeHome extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: EdgeInsets.all(15),
+                // padding: EdgeInsets.all(15),
                 height: 60,
                 child: FadeAnimatedTextKit(
                     isRepeatingAnimation: true,

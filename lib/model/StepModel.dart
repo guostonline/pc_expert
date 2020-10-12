@@ -8,7 +8,7 @@ import 'package:pc_expert/model/Constant.dart';
 class StepModel extends ChangeNotifier {
   int idDossier;
   String marqueDePc;
-  String referanceDePc = 'Choisir';
+  String referanceDePc;
   String totalReferanceDePc = '';
   String serieDePc;
   String composantDePc;
@@ -193,6 +193,8 @@ class StepModel extends ChangeNotifier {
       default:
         {
           marqueDePc = marque;
+          referanceList = autreMarque;
+          imagePath = "autre.png";
         }
     }
     notifyListeners();
@@ -255,7 +257,7 @@ class StepModel extends ChangeNotifier {
 
   selectComposantDemander(String marque) {
     switch (marque) {
-      case "back":
+      case "Back":
         {
           composantDePc = "Back";
           imagePathComposant = "back.jpg";
@@ -264,23 +266,17 @@ class StepModel extends ChangeNotifier {
           visibleC1 = 1;
         }
         break;
-      case "circuit":
+      case "Cpu":
         {
-          composantDePc = "Circuit";
-          imagePathComposant = "circuit.jpg";
+          composantDePc = "Cpu";
+          imagePathComposant = "cpu.png";
 
           allInVisibleComposant();
           visibleC2 = 1;
         }
         break;
-      case "autre":
-        {
-          isVisibleMarque = true;
-          allInVisibleComposant();
-          visibleC12 = 1;
-        }
-        break;
-      case "clavier":
+
+      case "Clavier":
         {
           composantDePc = "Clavier";
           imagePathComposant = "clavier.jpg";
@@ -289,7 +285,7 @@ class StepModel extends ChangeNotifier {
           visibleC3 = 1;
         }
         break;
-      case "ecran":
+      case "Ecran":
         {
           composantDePc = "Ecran";
           imagePathComposant = "display.jpg";
@@ -298,7 +294,7 @@ class StepModel extends ChangeNotifier {
           visibleC4 = 1;
         }
         break;
-      case "matherboard":
+      case "Carte mère":
         {
           composantDePc = "Carte mère";
           imagePathComposant = "matherboard.jpg";
@@ -307,7 +303,7 @@ class StepModel extends ChangeNotifier {
           visibleC5 = 1;
         }
         break;
-      case "trackpad":
+      case "Trackpad":
         {
           composantDePc = "TrackPad";
           imagePathComposant = "trackpad.jpg";
@@ -315,49 +311,55 @@ class StepModel extends ChangeNotifier {
           visibleC6 = 1;
         }
         break;
-      case "msi":
+      case "Tapi":
         {
-          composantDePc = "Msi";
-          imagePathComposant = "composants/back.jpg";
+          composantDePc = "Tapi";
+          imagePathComposant = "tapi.png";
 
           allInVisibleComposant();
           visibleC7 = 1;
         }
         break;
-      case "samsung":
+      case "Son":
         {
-          composantDePc = "Samsung";
-          imagePathComposant = "composants/back.jpg";
+          composantDePc = "Son";
+          imagePathComposant = "card-sound.png";
 
           allInVisibleComposant();
           visibleC8 = 1;
         }
         break;
-      case "sony":
+      case "Resaux":
         {
-          composantDePc = "Sony";
-          imagePathComposant = "composants/back.jpg";
+          composantDePc = "Resaux";
+          imagePathComposant = "card-network.png";
 
           allInVisibleComposant();
           visibleC9 = 1;
         }
         break;
-      case "surface":
+      case "Gpu":
         {
-          composantDePc = "Surface";
-          imagePathComposant = "composants/back.jpg";
+          composantDePc = "Gpu";
+          imagePathComposant = "gpu.png";
 
           allInVisibleComposant();
           visibleC11 = 1;
         }
         break;
-      case "toshiba":
+      case "Cadre d'écrant":
         {
-          composantDePc = "Toshiba";
-          imagePathComposant = "composants/back.jpg";
+          composantDePc = "Cadre d'écrant";
+          imagePathComposant = "cadre-pc.png";
 
           allInVisibleComposant();
           visibleC6 = 1;
+        }
+        break;
+      case "Autre":
+        {
+          composantDePc = "Autre";
+          imagePathComposant = "circuit.jpg";
         }
         break;
 
