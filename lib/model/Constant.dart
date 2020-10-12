@@ -35,6 +35,7 @@ const List<String> apple = [
   "MacPro",
   "Autre"
 ];
+const List<String> autreMarque = ["Autre"];
 const List<String> asus = ["ZenBook", "VivoBook"];
 const List<String> dell = [
   'Alienware',
@@ -88,5 +89,20 @@ const List<String> composants = [
   "Cadre d'ecrant",
   "Carquasse",
   "Carte mére",
+  "Autre"
+];
+
+const List<String> lesComposant = [
+  'Carte mère',
+  'Ecran',
+  'Clavier',
+  'Trackpad',
+  "Back",
+  "Tapi",
+  "Cadre d'écrant",
+  "Cpu",
+  "Gpu",
+  "Son",
+  "Resaux",
   "Autre"
 ];
